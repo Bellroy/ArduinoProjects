@@ -17,11 +17,11 @@
 #define SD_CS 4
 
 //CS for DDS
-#define DDS_CS 52
+#define DDS_CS 52   //System clock for SPI
 //Used
 #define MASTER_RESET 18 //Goes to DDS pin 14
 #define IO_RESET 37         //Goes to DDS pin 71
-#define IO_UPDATE 50    //Goes to DDS pin 59
+#define IO_UPDATE 46    //Goes to DDS pin 59
 #define DROVER 23         //Goes to DDS pin 61
 #define DRCTL 25          //Goes to DDS pin 62
 #define DRHOLD 27        //Goes to DDS pin 63
@@ -30,7 +30,7 @@
 #define SWEEP_TRIGGER 14
 #define FAUX_TRIGGER 16
 #define P0 53        //Goes to DDS pin 52
-#define P1 51          //Goes to DDS pin 53
+#define P1 48          //Goes to DDS pin 53
 #define P2 49          //Goes to DDS pin 54
 
 
