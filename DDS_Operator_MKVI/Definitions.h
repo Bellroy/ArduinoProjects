@@ -22,8 +22,8 @@ static inline
 void digitalWriteDirect(int pin, boolean val) {
 
 
-    if (val) g_APinDescription[pin].pPort->PIO_SODR = g_APinDescription[pin].ulPin; else
-        g_APinDescription[pin].pPort->PIO_CODR = g_APinDescription[pin].ulPin;
+    if (val) g_APinDescription[pin].pPort->PIO_SODR = g_APinDescription[pin].ulPin;
+    else g_APinDescription[pin].pPort->PIO_CODR = g_APinDescription[pin].ulPin;
 }
 
 
@@ -31,7 +31,6 @@ void digitalWriteDirect(int pin, boolean val) {
 
 static inline int digitalReadDirect(int pin) {
     return !!(g_APinDescription[pin].pPort->PIO_PDSR & g_APinDescription[pin].ulPin);
-
 
 }
 
