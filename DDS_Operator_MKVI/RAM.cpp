@@ -3,8 +3,7 @@
 //
 
 #include "RAM.h"
-#include "PinDefinitions.h"
-#include "Definitions.h"
+
 
 //Blank constructor. Sets aside memory for object without initializing it
 RAM::RAM() { }

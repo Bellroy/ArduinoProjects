@@ -3,7 +3,7 @@
 //
 
 #include "Definitions.h"
-#include "PinDefinitions.h"
+
 
 boolean fastUpdate = false;
 boolean DHCP_ENABLE = false;

@@ -3,10 +3,7 @@
 //
 
 #include "Ethernet_Handler.h"
-#include "SD_Handler.h"
-#include "LCD_Handler.h"
-#include "Definitions.h"
-#include "PLL.h"
+
 
 //Variables used to define Ethernet constants
 EthernetClient client; // Client instance for connected client
@@ -202,9 +199,9 @@ boolean writeFileToClient(char *file) {
         return false;
     }
     while (client.connected() && myFile.available()) {
-        memset(Buffer, 0, sizeof(Buffer));
-        myFile.read(Buffer, sizeof(Buffer));
-        client.write(Buffer, sizeof(Buffer));
+        memset(buffer, 0, sizeof(buffer));
+        myFile.read(buffer, sizeof(buffer));
+        client.write(buffer, sizeof(buffer));
     }
     return true;
 }
@@ -220,9 +217,9 @@ boolean writeClientStreamToFile(char *file) {
         return false;
     }
     while (client.available()) {
-        memset(Buffer, 0, sizeof(Buffer));
-        client.readBytes(Buffer, sizeof(Buffer));
-        myFile.write(Buffer, sizeof(Buffer));
+        memset(buffer, 0, sizeof(buffer));
+        client.readBytes(buffer, sizeof(buffer));
+        myFile.write(buffer, sizeof(buffer));
     }
 }
 

@@ -2,10 +2,7 @@
 // Created by Nick on 01-Feb-17.
 //
 
-#include "Arduino.h"
 #include "Ramper.h"
-#include "PinDefinitions.h"
-#include "Definitions.h"
 
 //Blank constructor. Sets aside memory for object before it is initialized
 Ramper::Ramper() { }

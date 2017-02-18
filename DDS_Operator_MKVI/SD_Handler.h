@@ -7,6 +7,7 @@
 #define SD_Handler_h
 
 #include <SD.h>
+#include "Definitions.h"
 
 extern boolean SDisBegun;
 extern File myFile;

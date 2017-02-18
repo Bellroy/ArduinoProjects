@@ -8,6 +8,8 @@
 
 #include "Arduino.h"
 #include "Register.h"
+#include "PinDefinitions.h"
+#include "Definitions.h"
 
 class PLL {
 public:

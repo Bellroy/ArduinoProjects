@@ -10,6 +10,8 @@
 #include "DRG.h"
 #include "RAM.h"
 #include "Ramper.h"
+#include "PinDefinitions.h"
+
 /*Definitions File
 This defines functions and objects that will want to be shared across libraries
 */

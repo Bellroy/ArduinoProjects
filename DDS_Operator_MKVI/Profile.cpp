@@ -2,9 +2,8 @@
 // Created by Nick on 01-Feb-17.
 //
 
-#include "PLL.h"
+
 #include "Profile.h"
-#include "Definitions.h"
 
 //Empty Profile Constructor
 //Used to set aside memory for a profile instance before it has been [can be] initialized

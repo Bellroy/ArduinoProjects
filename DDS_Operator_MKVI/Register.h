@@ -8,6 +8,7 @@
 
 #include "Arduino.h"
 #include "SPI.h"
+#include "PinDefinitions.h"
 
 class Register {
 public:

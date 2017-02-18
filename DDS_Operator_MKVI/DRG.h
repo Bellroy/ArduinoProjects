@@ -8,6 +8,8 @@
 
 #include "Arduino.h"
 #include "Register.h"
+#include "PinDefinitions.h"
+#include "Definitions.h"
 
 /*DRG class:
 This class contains methods and data for controlling the DRG part of the AD9910 chip

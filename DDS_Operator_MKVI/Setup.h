@@ -11,6 +11,9 @@
 #include "DRG.h"
 #include "RAM.h"
 #include "Ramper.h"
+#include "PinDefinitions.h"
+#include "Definitions.h"
+#include "LCD_handler.h"
 
 //Globals
 extern DRG myDRG;

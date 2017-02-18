@@ -11,6 +11,9 @@
 #include "DRG.h"
 #include "Ramp.h"
 #include "RAM.h"
+#include "Ramper.h"
+#include "PinDefinitions.h"
+#include "Definitions.h"
 
 class Ramper {
 public:

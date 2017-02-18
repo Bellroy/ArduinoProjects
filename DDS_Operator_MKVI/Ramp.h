@@ -8,6 +8,10 @@
 #define Ramp_h
 
 #include "Arduino.h"
+#include "Ramper.h"
+#include "PinDefinitions.h"
+#include "Definitions.h"
+#include "PLL.h"
 
 class Ramp {
 public:

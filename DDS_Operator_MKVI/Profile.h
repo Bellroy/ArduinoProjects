@@ -8,6 +8,8 @@
 
 #include "Arduino.h"
 #include "Register.h"
+#include "PLL.h"
+#include "Definitions.h"
 
 class Profile {
 public:

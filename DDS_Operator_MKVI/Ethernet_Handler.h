@@ -7,6 +7,10 @@
 
 #include <Ethernet.h>
 #include "Ramp.h"
+#include "SD_Handler.h"
+#include "LCD_Handler.h"
+#include "Definitions.h"
+#include "PLL.h"
 
 //Variables that need to accessed out of the context of Ethernet_Handler
 extern EthernetClient client;

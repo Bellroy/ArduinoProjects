@@ -2,10 +2,8 @@
 // Created by Nick on 01-Feb-17.
 //
 
-#include "Arduino.h"
-#include "SPI.h"
+
 #include "Register.h"
-#include "PinDefinitions.h"
 
 //Constructor that takes the register's address and length
 Register::Register(byte address, int dataLength) {

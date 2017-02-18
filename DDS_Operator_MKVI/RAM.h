@@ -8,6 +8,8 @@
 
 #include "Arduino.h"
 #include "Register.h"
+#include "PinDefinitions.h"
+#include "Definitions.h"
 
 #define FREQUENCY 0
 #define PHASE 32
