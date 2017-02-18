@@ -1,9 +1,7 @@
-//
-// Created by Nick on 01-Feb-17.
-//
-
 #include "Setup.h"
-
+#include "PinDefinitions.h"
+#include "Definitions.h"
+#include "LCD_handler.h"
 
 //Function that sets up the PLL clock settings using a reference
 // a pll object, the input clock (MHz) and the desired output clock (MHz)

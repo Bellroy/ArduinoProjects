@@ -1,14 +1,12 @@
-//
-// Created by Nick on 01-Feb-17.
-//
-
+#include "Arduino.h"
 #include "Ramper.h"
+#include "PinDefinitions.h"
+#include "Definitions.h"
 
 //Blank constructor. Sets aside memory for object before it is initialized
 Ramper::Ramper() { }
 
-//Normal Constructor. Ramper only needs a reference to a DRG object instance and a RAM object
-instance
+//Normal Constructor. Ramper only needs a reference to a DRG object instance and a RAM object instance
 Ramper::Ramper(DRG &myDrg, RAM &ramObject) {
     drg = &myDrg;
     myRAM = &ramObject;
@@ -28,11 +26,26 @@ void Ramper::doSweep(Ramp ramp) {
     beginSweep(ramp.direction);
 }
 
+
 //class variable informing whether a sweep has been loaded
 boolean loaded = false;
 //class variable informing if the device has been told to come out of sweep mode
 boolean RESET_FLAG = false;
 boolean bumped = false;
+
+
+void setDrgLow() {
+    detachInterrupt(DROVER);
+    digitalWriteDirect(DRCTL, LOW);
+    attachInterrupt(SWEEP_TRIGGER, Bump, RISING);
+}
+
+void Bump() {
+    detachInterrupt(SWEEP_TRIGGER);
+    bumped = true;
+    digitalWriteDirect(DRCTL, HIGH);
+    attachInterrupt(DROVER, setDrgLow, RISING);
+}
 
 //Chains sweeps in rampArray together to perform one constant sweep
 //Length is the number of sweeps to go through
@@ -131,18 +144,7 @@ void Ramper::resetTrigger() {
     RESET_FLAG = true;
 }
 
-void setDrgLow() {
-    detachInterrupt(DROVER);
-    digitalWriteDirect(DRCTL, LOW);
-    attachInterrupt(SWEEP_TRIGGER, Bump, RISING);
-}
 
-Ramper::Bump() {
-    detachInterrupt(SWEEP_TRIGGER);
-    bumped = true;
-    digitalWriteDirect(DRCTL, HIGH);
-    attachInterrupt(DROVER, setDrgLow, RISING);
-}
 
 //Function to begin the currently loaded (in buffer) sweep
 void Ramper::beginSweep(boolean dir) {

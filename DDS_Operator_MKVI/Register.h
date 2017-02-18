@@ -1,14 +1,9 @@
-//
-// Created by Nick on 01-Feb-17.
-//
-
 //Register class -- Backbone of AD9910 communication and programming
 #ifndef Register_h
 #define Register_h
 
 #include "Arduino.h"
 #include "SPI.h"
-#include "PinDefinitions.h"
 
 class Register {
 public:

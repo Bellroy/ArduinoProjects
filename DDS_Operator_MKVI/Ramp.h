@@ -1,17 +1,9 @@
-//
-// Created by Nick on 01-Feb-17.
-//
-
 //Ramp object. Contains data needed to make a Ramp
 //Should take up 17 bytes
 #ifndef Ramp_h
 #define Ramp_h
 
 #include "Arduino.h"
-#include "Ramper.h"
-#include "PinDefinitions.h"
-#include "Definitions.h"
-#include "PLL.h"
 
 class Ramp {
 public:

@@ -1,7 +1,3 @@
-//
-// Created by Nick on 01-Feb-17.
-//
-
 #ifndef LCD_Handler_h
 #define LCD_Handler_h
 

@@ -1,16 +1,8 @@
-//
-// Created by Nick on 01-Feb-17.
-//
-
 #ifndef Ethernet_Handler_h
 #define Ethernet_Handler_h
 
 #include <Ethernet.h>
 #include "Ramp.h"
-#include "SD_Handler.h"
-#include "LCD_Handler.h"
-#include "Definitions.h"
-#include "PLL.h"
 
 //Variables that need to accessed out of the context of Ethernet_Handler
 extern EthernetClient client;

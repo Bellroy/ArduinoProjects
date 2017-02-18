@@ -1,6 +1,6 @@
 #include "DRG.h"
-
-
+#include "PinDefinitions.h"
+#include "Definitions.h"
 
 //Blank Constructor so memory can be set aside before DRG class is actually initialized
 DRG::DRG() { }

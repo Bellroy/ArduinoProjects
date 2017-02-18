@@ -1,18 +1,12 @@
-//
-// Created by Nick on 01-Feb-17.
-//
-
-
 #ifndef DRG_h
 #define DRG_h
 
 #include "Arduino.h"
 #include "Register.h"
-#include "PinDefinitions.h"
-#include "Definitions.h"
 
 /*DRG class:
-This class contains methods and data for controlling the DRG part of the AD9910 chip
+This class contains methods and data for controlling the DRG
+part of the AD9910 chip
 */
 class DRG {
 public:
@@ -64,21 +58,16 @@ private:
     union data4 {
         byte b[4];
         unsigned int value;
-
-
     };
     union data2 {
         byte b[2];
         short value;
-
-
     };
     union data4 _upperLimit;
     union data4 _lowerLimit;
     union data4 _negStep;
     union data4 _posStep;
-    union
-            data2 _posSlope;
+    union data2 _posSlope;
     union data2 _negSlope;
     byte _CFR1[4];
     byte _CFR2[4];

@@ -1,15 +1,9 @@
-//
-// Created by Nick on 01-Feb-17.
-//
-
 //Library that defines getting a single-tone frequency output from the AD9910
 #ifndef Profile_h
 #define Profile_h
 
 #include "Arduino.h"
 #include "Register.h"
-#include "PLL.h"
-#include "Definitions.h"
 
 class Profile {
 public:

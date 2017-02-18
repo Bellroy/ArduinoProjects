@@ -1,15 +1,9 @@
-//
-// Created by Nick on 01-Feb-17.
-//
-
 //Class that controls writing to DDS RAM
 #ifndef RAM_h
 #define RAM_h
 
 #include "Arduino.h"
 #include "Register.h"
-#include "PinDefinitions.h"
-#include "Definitions.h"
 
 #define FREQUENCY 0
 #define PHASE 32

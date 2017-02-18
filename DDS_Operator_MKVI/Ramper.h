@@ -1,7 +1,3 @@
-//
-// Created by Nick on 01-Feb-17.
-//
-
 //Class that controls the DRG and RAM using instances
 //of the Ramp class in order to create sweeps and chained sweeps
 #ifndef Ramper_h
@@ -11,9 +7,6 @@
 #include "DRG.h"
 #include "Ramp.h"
 #include "RAM.h"
-#include "Ramper.h"
-#include "PinDefinitions.h"
-#include "Definitions.h"
 
 class Ramper {
 public:
@@ -36,6 +29,8 @@ public:
     static void resetTrigger();
 
     void Bump();
+
+    void setDrgLow();
 
 private:
     void turnOnDRG();

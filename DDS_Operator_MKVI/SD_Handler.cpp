@@ -1,9 +1,5 @@
-//
-// Created by Nick on 01-Feb-17.
-//
-
 #include "SD_Handler.h"
-
+#include "Definitions.h"
 
 //Boolean to check if an SD card has been inserted
 boolean SDisBegun = false;

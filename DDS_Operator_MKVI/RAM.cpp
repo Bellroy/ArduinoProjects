@@ -1,9 +1,6 @@
-//
-// Created by Nick on 01-Feb-17.
-//
-
 #include "RAM.h"
-
+#include "PinDefinitions.h"
+#include "Definitions.h"
 
 //Blank constructor. Sets aside memory for object without initializing it
 RAM::RAM() { }
@@ -49,8 +46,7 @@ void RAM::setRAMEnabled() {
 //Serial.print("Setting Ram Enabled:\nBefore:");
 //Serial.println(CFR1->_data[0]);
     CFR1->_data[0] = ((CFR1->_data[0] & (0b01111111)) | (0b10000000));
-//Serial.print("After:");
-    //Serial.println(CFR1->_data[0]);
+//Serial.print("After:");//Serial.println(CFR1->_data[0]);
 }
 
 //Set the RAM enable bit to disabled in the CFR1 register. The RAM will cease to be a word source

@@ -1,9 +1,6 @@
-//
-// Created by Nick on 01-Feb-17.
-//
-
-
+#include "PLL.h"
 #include "Profile.h"
+#include "Definitions.h"
 
 //Empty Profile Constructor
 //Used to set aside memory for a profile instance before it has been [can be] initialized
@@ -66,8 +63,7 @@ void Profile::setFreq(int Freq, boolean com) {
     setFTW(FTW, com);
 }
 
-//Produces the given tuning word at the output of the DDS. Disables all other modes of input
-words
+//Produces the given tuning word at the output of the DDS. Disables all other modes of input words
 void Profile::produceFTW(unsigned int FTW) {
     setFTW(FTW, true);
 //Set DRG Disabled, RAM Disabled, Profile Enabled

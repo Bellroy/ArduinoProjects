@@ -1,9 +1,6 @@
-//
-// Created by Nick on 01-Feb-17.
-//
-
 #include "PLL.h"
-
+#include "PinDefinitions.h"
+#include "Definitions.h"
 
 //Static variable that is set when the PLL is. Contains
 //the set clock; used for calculating frequency words

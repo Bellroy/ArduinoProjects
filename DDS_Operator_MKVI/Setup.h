@@ -1,7 +1,3 @@
-//
-// Created by Nick on 01-Feb-17.
-//
-
 //Library defining functions needed to set up the DDS
 #ifndef Setup_h
 #define Setup_h
@@ -11,9 +7,6 @@
 #include "DRG.h"
 #include "RAM.h"
 #include "Ramper.h"
-#include "PinDefinitions.h"
-#include "Definitions.h"
-#include "LCD_handler.h"
 
 //Globals
 extern DRG myDRG;
