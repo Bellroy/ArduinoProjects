@@ -36,6 +36,7 @@ Ramper sweeper;
 //Ramp Array for storing a multi-part sweep
 Ramp rampArray[255];
 byte rampArrayLen = 0;
+/*
 //Function that performs a software reset
 void Software_Reset() {
   Serial.println("Going down for reset!");
@@ -43,6 +44,7 @@ void Software_Reset() {
   RSTC->RSTC_CR = RSTC_CR_KEY(RSTC_KEY) | RSTC_CR_PROCRST | RSTC_CR_PERRST;
   while (true);
 }
+*/
 void myTest() {
   Ramp myRamp = Ramp(50000, 500000, 10000, 0, 0);
   Ramp r1 = Ramp(5000000, 50000000, 10000, 0, 0);
@@ -208,7 +210,7 @@ void loop() {
     client.stop();
     //If reset condition has been made, perform software reset
     if (result == 'r') {
-      Software_Reset();
+      //Software_Reset();
     }
   }
   client.stop();

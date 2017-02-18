@@ -8,14 +8,14 @@
 This defines functions and objects that will want to be shared across libraries
 */
 //Compiler Macro that defines a direct port write. Is much faster than digitalWrite (for time sensitive uses)
-static __inline__ void digitalWriteDirect(int pin, boolean val){
-    if(val) g_APinDescription[pin].pPort -> PIO_SODR = g_APinDescription[pin].ulPin;
-    else g_APinDescription[pin].pPort -> PIO_CODR = g_APinDescription[pin].ulPin;
-}
+//inline void digitalWriteDirect(int pin, boolean val){
+//    if(val) g_APinDescription[pin].pPort -> PIO_SODR = g_APinDescription[pin].ulPin;
+//    else g_APinDescription[pin].pPort -> PIO_CODR = g_APinDescription[pin].ulPin;
+//}
 //Compiler Macro that defines a direct port read. Is much faster than digitaRead (for time sensitive uses)
-static inline int digitalReadDirect(int pin){
-    return !!(g_APinDescription[pin].pPort -> PIO_PDSR & g_APinDescription[pin].ulPin);
-}
+//inline int digitalReadDirect(int pin){
+//    return !!(g_APinDescription[pin] -> PIO_PDSR & g_APinDescription[pin].ulPin);
+//}
 //Variables that define the state of the system
 extern boolean fastUpdate;
 extern boolean DHCP_ENABLE;
