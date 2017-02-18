@@ -26,13 +26,11 @@ void Ramper::doSweep(Ramp ramp) {
     beginSweep(ramp.direction);
 }
 
-
 //class variable informing whether a sweep has been loaded
 boolean loaded = false;
 //class variable informing if the device has been told to come out of sweep mode
 boolean RESET_FLAG = false;
 boolean bumped = false;
-
 
 void setDrgLow() {
     detachInterrupt(DROVER);
@@ -88,7 +86,7 @@ void Ramper::chainedSweeps(Ramp *rampArray, int length) {
     int tic = millis();
     bumped = false;
     int timeout = 60 * 1000; // 1 minute
-    attachInterrupt(SWEEP_TRIGGER, Bump, RISING);
+    attachInterrupt(SWEEP_TRIGGER,  Bump, RISING);
 //Stay in bump mode until reset is triggered or timeout occurs
     while (!RESET_FLAG && millis() - tic < timeout) {
         if (bumped) {
@@ -139,6 +137,7 @@ void Ramper::loadSingleSweep(Ramp ramp) {
 void Ramper::trigger() {
     loaded = false;
 }
+
 
 void Ramper::resetTrigger() {
     RESET_FLAG = true;

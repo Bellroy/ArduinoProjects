@@ -30,8 +30,6 @@ public:
 
     void Bump();
 
-    void setDrgLow();
-
 private:
     void turnOnDRG();
 
