@@ -48,8 +48,7 @@ void DRG::release() {
 
 //Return true if DRG has reached bottom or upper limit
 boolean DRG::isAtLimit() {
-    //return digitalReadDirect(DROVER);
-    return digitalRead(DROVER);
+    return digitalReadDirect(DROVER);
 }
 
 //Set Digital Ramp Destination Bit to value

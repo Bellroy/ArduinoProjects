@@ -135,15 +135,13 @@ void Ramper::resetTrigger() {
 
 void Ramper::setDrgLow(){
     detachInterrupt(DROVER);
-    //digitalWriteDirect(DRCTL,LOW);
-    digitalWrite(DRCTL,LOW);
+    digitalWriteDirect(DRCTL,LOW);
     attachInterrupt(SWEEP_TRIGGER, Bump , RISING);
 }
 void Ramper::Bump(){
     detachInterrupt(SWEEP_TRIGGER);
     bumped=true;
-    //digitalWriteDirect(DRCTL,HIGH);
-    digitalWrite(DRCTL,HIGH);
+    digitalWriteDirect(DRCTL,HIGH);
     attachInterrupt(DROVER, setDrgLow, RISING);
 }
 
@@ -151,24 +149,20 @@ void Ramper::Bump(){
 void Ramper::beginSweep(boolean dir) {
     if (dir) {
         update();
-        //digitalWriteDirect(DRCTL, HIGH);
-        digitalWrite(DRCTL, HIGH);
+        digitalWriteDirect(DRCTL, HIGH);
 //drg->slopeControlHigh();
     }
     else {
 //Then we want to stall at ramp.highWord
         update();
 //Then we want to sweep up ramp until high
-        //digitalWriteDirect(DRCTL, HIGH);
-        digitalWrite(DRCTL, HIGH);
+        digitalWriteDirect(DRCTL, HIGH);
 //drg->slopeControlHigh();
-        while (!digitalRead(DROVER)) { }
-        //while (!digitalReadDirect(DROVER)) { }
+        while (!digitalReadDirect(DROVER)) { }
 //Remove RAM control
         myRAM->stopStall();
 //Begin sweep down
-        //digitalWriteDirect(DRCTL, LOW);
-        digitalWrite(DRCTL, LOW);
+        digitalWriteDirect(DRCTL, LOW);
 //drg->slopeControlLow();
     }
 }

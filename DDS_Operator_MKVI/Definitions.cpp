@@ -40,11 +40,9 @@ Register RAM_WRITE(0x16, 4);
 
 void update() {
 //Special update used to maximize speed of update
-    //digitalWriteDirect(IO_UPDATE, HIGH);
-    digitalWrite(IO_UPDATE, HIGH);
+    digitalWriteDirect(IO_UPDATE, HIGH);
     if (!fastUpdate) {
         delayMicroseconds(1);
     }
-    //digitalWriteDirect(IO_UPDATE, LOW);
-    digitalWrite(IO_UPDATE, LOW);
+    digitalWriteDirect(IO_UPDATE, LOW);
 }
