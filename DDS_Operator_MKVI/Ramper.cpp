@@ -3,6 +3,7 @@
 #include "PinDefinitions.h"
 #include "Definitions.h"
 
+
 //Blank constructor. Sets aside memory for object before it is initialized
 Ramper::Ramper() { }
 
@@ -32,18 +33,7 @@ boolean loaded = false;
 boolean RESET_FLAG = false;
 boolean bumped = false;
 
-void setDrgLow() {
-    detachInterrupt(DROVER);
-    digitalWriteDirect(DRCTL, LOW);
-    attachInterrupt(SWEEP_TRIGGER, Bump, RISING);
-}
 
-void Bump() {
-    detachInterrupt(SWEEP_TRIGGER);
-    bumped = true;
-    digitalWriteDirect(DRCTL, HIGH);
-    attachInterrupt(DROVER, setDrgLow, RISING);
-}
 
 //Chains sweeps in rampArray together to perform one constant sweep
 //Length is the number of sweeps to go through
@@ -86,7 +76,7 @@ void Ramper::chainedSweeps(Ramp *rampArray, int length) {
     int tic = millis();
     bumped = false;
     int timeout = 60 * 1000; // 1 minute
-    attachInterrupt(SWEEP_TRIGGER,  Bump, RISING);
+    attachInterrupt(SWEEP_TRIGGER, Ramper::Bump, RISING);
 //Stay in bump mode until reset is triggered or timeout occurs
     while (!RESET_FLAG && millis() - tic < timeout) {
         if (bumped) {
@@ -143,7 +133,17 @@ void Ramper::resetTrigger() {
     RESET_FLAG = true;
 }
 
-
+void Ramper::setDrgLow(){
+    detachInterrupt(DROVER);
+    digitalWriteDirect(DRCTL,LOW);
+    attachInterrupt(SWEEP_TRIGGER, Bump , RISING);
+}
+void Ramper::Bump(){
+    detachInterrupt(SWEEP_TRIGGER);
+    bumped=true;
+    digitalWriteDirect(DRCTL,HIGH);
+    attachInterrupt(DROVER, setDrgLow, RISING);
+}
 
 //Function to begin the currently loaded (in buffer) sweep
 void Ramper::beginSweep(boolean dir) {

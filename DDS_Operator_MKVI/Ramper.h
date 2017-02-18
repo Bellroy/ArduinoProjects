@@ -28,7 +28,8 @@ public:
 
     static void resetTrigger();
 
-    void Bump();
+    static void Bump();
+    static void setDrgLow();
 
 private:
     void turnOnDRG();
