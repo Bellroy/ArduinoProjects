@@ -32,15 +32,13 @@ public:
 
     void setDigitalRampEnable(boolean value);
 
-    void
-            commitCFR2();
+    void commitCFR2();
 
     void setUpperLimit(unsigned int tuningWord);
 
     void setLowerLimit(unsigned int tuningWord);
 
-    void
-            commitLimits();
+    void commitLimits();
 
     void setNoDwellHigh(boolean value);
 
@@ -50,15 +48,13 @@ public:
 
     void setPositiveSlope(unsigned short value);
 
-    void
-            commitSlopes();
+    void commitSlopes();
 
     void setPositiveStepRate(unsigned int step);
 
     void setNegativeStepRate(unsigned int step);
 
-    void
-            commitStepRates();
+    void commitStepRates();
 
     void commit();
 

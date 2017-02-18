@@ -16,20 +16,20 @@ This defines functions and objects that will want to be shared across libraries
 
 //Compiler Macro that defines a direct port write. Is much faster than digitalWrite (for time sensitive uses)
 
-//static inline void digitalWriteDirect(int pin, boolean val) {
-//
-//
-//    if (val) g_APinDescription[pin].pPort->PIO_SODR = g_APinDescription[pin].ulPin;
-//    else g_APinDescription[pin].pPort->PIO_CODR = g_APinDescription[pin].ulPin;
-//}
+static inline void digitalWriteDirect(int pin, boolean val) {
+
+
+    if (val) g_APinDescription[pin].pPort->PIO_SODR = g_APinDescription[pin].ulPin;
+    else g_APinDescription[pin].pPort->PIO_CODR = g_APinDescription[pin].ulPin;
+}
 
 
 //Compiler Macro that defines a direct port read. Is much faster than digitaRead (for time sensitive uses)
 
-//static inline int digitalReadDirect(int pin) {
-//    return !!(g_APinDescription[pin].pPort->PIO_PDSR & g_APinDescription[pin].ulPin);
-//
-//}
+static inline int digitalReadDirect(int pin) {
+    return !!(g_APinDescription[pin].pPort->PIO_PDSR & g_APinDescription[pin].ulPin);
+
+}
 
 //Variables that define the state of the system extern boolean fastUpdate;
 extern boolean DHCP_ENABLE;
@@ -49,8 +49,7 @@ extern Register MULTICHIP_SYNC;
 extern Register DIGITAL_RAMP_LIMIT;
 extern Register DIGITAL_RAMP_STEP_SIZE;
 extern Register DIGITAL_RAMP_RATE;
-extern Register
-        SINGLE_TONE_0;
+extern Register SINGLE_TONE_0;
 extern Register RAM_PROFILE_0;
 /*extern Register SINGLE_TONE_1(0x0F,8); extern Register RAM_PROFILE_1(0x0F,8);
 extern Register SINGLE_TONE_2(0x10,8);
