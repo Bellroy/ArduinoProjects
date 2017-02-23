@@ -5,13 +5,13 @@
 
 //Define Pinout Constants
 //LCD Pins
-#define LCD1 8
-#define LCD2 13
-#define LCD3 9
-#define LCD4 3
-#define LCD5 5
-#define LCD7 6
-#define LCD8 7
+#define LCD1 8  //LCD RESET
+#define LCD2 13 //LCD RW
+#define LCD3 9  //LCD Enable
+#define LCD4 3  //D4
+#define LCD5 5  //D5
+#define LCD7 6  //D6
+#define LCD8 7  //D7
 //CS for Ethernet, SD Card
 #define ETH_CS 10
 #define SD_CS 4
@@ -25,13 +25,13 @@
 #define DROVER 23         //Goes to DDS pin 61
 #define DRCTL 25          //Goes to DDS pin 62
 #define DRHOLD 27        //Goes to DDS pin 63
-#define PLL_LOCK 17
+#define PLL_LOCK 17      //Goes to DDS Pin 19
 #define SWEEP_RESET_TRIGGER 15
 #define SWEEP_TRIGGER 14
 #define FAUX_TRIGGER 16
-#define P0 53        //Goes to DDS pin 52
+#define P0 53        //Goes to DDS pin 54
 #define P1 48          //Goes to DDS pin 53
-#define P2 49          //Goes to DDS pin 54
+#define P2 49          //Goes to DDS pin 52
 
 
 //Unused

@@ -7,7 +7,7 @@
 //Variables used to define Ethernet constants
 EthernetClient client; // Client instance for connected client
 EthernetServer server(80); //Server instance on port 80
-byte mac[] = {0x90, 0xa2, 0xda, 0x0f, 0x19, 0x4c}; //MAC address
+byte mac[] = {0x90, 0xa2, 0xda, 0x10, 0xCE, 0x7E}; //MAC address
 IPAddress ip(192, 168, 0, 178); // Static IP address
 //small Char buffer
 char dataBuffer[10];
