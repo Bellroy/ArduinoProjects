@@ -1,7 +1,7 @@
 #ifndef Ethernet_Handler_h
 #define Ethernet_Handler_h
 
-#include <Ethernet.h>
+#include <Ethernet2.h>
 #include "Ramp.h"
 
 //Variables that need to accessed out of the context of Ethernet_Handler
